@@ -1,0 +1,126 @@
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input[readonly] {
+  background-color: #f9f9f9;
+  color: #777;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background-color: #6a11cb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3b08a0;
+}
+
+
+
+
+/*  change password css  */
+
+
+.change-password-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.change-password-container h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.change-password-container input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.change-password-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6a11cb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change-password-container button:hover {
+  background-color: #3b08a0;
+}
+
+.change-password-container p {
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
+/*  use in login and register */
+
+p {
+  font-size: 15px;
+  color: rgb(55, 52, 52);
+  padding: 13px 0px;
+  text-align: center;
+}
+
+.register-link {
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: blueviolet;
+}

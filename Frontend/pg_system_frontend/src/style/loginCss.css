@@ -1,0 +1,150 @@
+ /* .login_body {
+  background-image: linear-gradient(to left, rgb(228, 97, 240), blueviolet);
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.form-section {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  top: 20vh;
+  border-radius: 10px;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 40px 0px 20px;
+  color: rgb(46, 43, 43);
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.input {
+  width: 300px;
+  line-height: 25px;
+  margin: 10px;
+}
+
+input[placeholder] {
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(55, 52, 52);
+  text-transform: none !important;
+}
+
+.btn {
+  background-image: linear-gradient(to left, rgb(228, 97, 240), blueviolet);
+  color: white;
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s, border 0.7s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, rgb(228, 97, 240), blueviolet);
+  color: rgb(0, 0, 0);
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+ 
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(161, 159, 159);
+}
+
+p {
+  font-size: 15px;
+  color: rgb(55, 52, 52);
+  padding: 13px 0px;
+}
+
+.register-link {
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: blueviolet;
+}
+
+
+.user_body {
+  background-image: linear-gradient(to left, #eaafc8, #654ea3);
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.user_btn {
+ background-image: linear-gradient(to left, #eaafc8, #654ea3);
+  color: white;
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s, border 0.7s;
+}
+
+.user_btn:hover {
+ background-image: linear-gradient(to left, #eaafc8, #654ea3);
+  color: rgb(0, 0, 0);
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(161, 159, 159);
+}
+
+
+
+
+
+
+.pg_owner_body {
+  background-image: linear-gradient(to left, #c3bd6f, #005aa7);
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.pg_owner_btn {
+  background-image: linear-gradient(to left, #c3bd6f, #005aa7);
+  color: white;
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s, border 0.7s;
+}
+
+.pg_owner_btn:hover {
+  background-image: linear-gradient(to left, #c3bd6f, #005aa7);
+  color: rgb(0, 0, 0);
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(161, 159, 159);
+}  */

@@ -1,0 +1,204 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+const ContactUs = () => {
+  const [user, setUser] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    // Check if user is authenticated
+    axios
+      .get("http://localhost:8080/user", { withCredentials: true })
+      .then((res) => setUser(res.data))
+      .catch(() => setUser(null));
+  }, []);
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!user) {
+      setStatus("❌ You must be logged in to submit the form.");
+      return;
+    }
+
+    try {
+      await axios.post("http://localhost:8080/contact", formData, {
+        withCredentials: true,
+      });
+      setStatus("✅ Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      setStatus("❌ Failed to send message.");
+    }
+  };
+
+  return (
+    <div>
+      <Header />
+      <div style={styles.container}>
+        <h1 style={styles.heading}>Contact Us</h1>
+
+        <div style={styles.flexRow}>
+          {/* Address Section */}
+          <div style={styles.addressSection}>
+            <div>
+              <h3>Our Address</h3>
+              <p>
+                <strong>Address:</strong> 123 Demo Street,
+                <br />
+                Mumbai, Maharashtra, India
+              </p>
+              <p>
+                <strong>Email:</strong> contact@example.com
+              </p>
+              <p>
+                <strong>Phone:</strong> +91 98765 43210
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <form style={styles.form} onSubmit={handleSubmit}>
+            <h2 style={styles.formHeading}>Send us a message</h2>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              style={styles.input}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              style={styles.input}
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              style={styles.textarea}
+            />
+            <button type="submit" style={styles.button}>
+              Submit
+            </button>
+            {status && <p style={styles.status}>{status}</p>}
+          </form>
+        </div>
+
+        {/* Map */}
+        <div style={styles.mapContainer}>
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160970147!2d72.74109911640607!3d19.082522318373824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63ff6ad0bbf%3A0x8d85a502865a1b79!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1669999999999"
+            width="100%"
+            height="400"
+            style={{ border: 0, borderRadius: "10px" }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: "1200px",
+    margin: "40px auto",
+    padding: "20px",
+    // backgroundColor: "#f4f4f4",
+    // borderRadius: "10px",
+    // boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+  },
+  heading: {
+    textAlign: "center",
+    fontSize: "2.5rem",
+    marginBottom: "30px",
+  },
+  flexRow: {
+    display: "flex",
+    gap: "30px",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  addressSection: {
+    display: "flex",
+    justifyContent:"center",
+  
+    flex: "1",
+    minWidth: "300px",
+    fontSize: "1.1rem",
+    backgroundColor: "#ffffff",
+    padding: "20px",
+    borderRadius: "10px",
+    lineHeight: "1.6",
+    textAlign: "center",
+  },
+  form: {
+    flex: "1",
+    minWidth: "300px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px",
+    backgroundColor: "#ffffff",
+    padding: "20px",
+    borderRadius: "10px",
+  },
+  formHeading: {
+    fontSize: "1.5rem",
+    marginBottom: "10px",
+    textAlign: "center",
+  },
+  input: {
+    padding: "10px",
+    fontSize: "1rem",
+    borderRadius: "5px",
+    border: "1px solid #ccc",
+  },
+  textarea: {
+    padding: "10px",
+    fontSize: "1rem",
+    borderRadius: "5px",
+    border: "1px solid #ccc",
+    minHeight: "100px",
+  },
+  button: {
+    padding: "12px",
+    fontSize: "1rem",
+    backgroundColor: "#4CAF50",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+  status: {
+    textAlign: "center",
+    marginTop: "10px",
+    color: "#d9534f",
+  },
+  mapContainer: {
+    marginTop: "40px",
+  },
+};
+
+export default ContactUs;

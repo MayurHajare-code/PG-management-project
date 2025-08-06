@@ -1,42 +1,57 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* form {
+  width: 400px !important;
+  text-align: center; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+h2 {
+  font-size: 30px;
+  margin: 40px 0px 20px;
+  color: rgb(46, 43, 43);
+  font-weight: bolder;
+  text-transform: capitalize;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 350px !important;
+  line-height: 25px;
+  margin: 10px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input[placeholder] {
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(55, 52, 52);
+  text-transform: none !important;
 }
 
-.card {
-  padding: 2em;
+button {
+  background-image: linear-gradient(to left, rgb(228, 97, 240), blueviolet);
+  color: white;
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s, border 0.7s;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-image: linear-gradient(to right, rgb(228, 97, 240), blueviolet);
+  color: rgb(0, 0, 0);
+  padding: 8px 25px;
+  margin: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  /* border: 0.5px solid blueviolet; 
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(161, 159, 159);
 }
+
+p {
+  font-size: 15px;
+  color: rgb(55, 52, 52);
+  padding: 13px 0px;
+} */
