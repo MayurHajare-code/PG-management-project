@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import API from "../api";
-import "../style/ProfilePage.css";
+// import "../style/ProfilePage.css";
 
+import "../style/UpdatePG.css";
 /*
     login page is common for all login (user, pg-owner, admin)
 */
@@ -31,7 +32,10 @@ const Login = () => {
         navigate("/");
       } else if (role === "ROLE_OWNER") {
         navigate("/pg_owner");
-      } else {
+      }  else if (role === "ROLE_ADMIN") {
+        navigate("/admin");
+      }
+      else {
         navigate("/unauthorized");
       }
     } catch (err) {
@@ -41,33 +45,41 @@ const Login = () => {
 
   return (
     <div className="login_body">
-      <form onSubmit={handleLogin} className="form-section">
+      <div className="container" style={{marginTop:"100px"}}>
         <h2>Login</h2>
-        <input
-          className="input"
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-          required
-        />
-        <input
-          type="password"
-          className="input"
-          placeholder="Password"
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
-          required
-        />
-        <button type="submit" className="btn">
-          Login
-        </button>
-        <p>
-          Doesn't have an account at yet?{" "}
-          {/* <a href="/register" class="register-link" id="register-link">
+        <form onSubmit={handleLogin} >
+          <input
+            className="input"
+            type="email"
+            placeholder="Email"
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            required
+          />
+          <input
+            type="password"
+            className="input"
+            placeholder="Password"
+            onChange={(e) => setForm({ ...form, password: e.target.value })}
+            required
+          />
+          <button type="submit" >
+            Login
+          </button>
+          <p>
+            Doesn't have an account at yet?{" "}
+            {/* <a href="/register" class="register-link" id="register-link">
             Register here
           </a> */}
-           <Link to="/user_register" className="register-link" id="register-link">Register here</Link>
-        </p>
-      </form>
+            <Link
+              to="/user_register"
+              className="register-link"
+              id="register-link"
+            >
+              Register here
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

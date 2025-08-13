@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
-import UserDashboard from "./pages/UserDashboard";
+// import UserDashboard from "./pages/UserDashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
 import Unauthorized from "./pages/Unauthorized";
 import UserRegister from "./pages/UserRegister";
@@ -18,8 +18,14 @@ import BookingsPage from "./pages/BookingsPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import OwnerBookings from "./pages/OwnerBookings";
 import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import PGPage from "./pages/PGPage";
+import AdminDashboard from "./pages/admin panel/AdminDashboard";
+import UsersPage from "./pages/admin panel/UsersPage";
+import OwnersPage from "./pages/admin panel/OwnersPage";
+import PGsPage from "./pages/admin panel/PGsPage";
+import UserBookingDetails from "./pages/admin panel/UserBookingDetails";
+import PGDetailsPage from "./pages/admin panel/PGDetailsPage";
+// import ContactUs from "./pages/ContactUs";
+// import PGPage from "../row data/PGPage";
 
 function App() {
   return (
@@ -35,8 +41,8 @@ function App() {
         <Route path="/user_register" element={<UserRegister />} />
 
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/pgs" element={<PGPage />} />
-        <Route path="/contact" element={<ContactUs />} />
+        {/* <Route path="/pgs" element={<PGPage />} />
+        <Route path="/contact" element={<ContactUs />} /> */}
 
         {/* <Route path="/profile" element={<ProfilePage />} />
         <Route path="/bookings" element={<BookingsPage />} />
@@ -109,11 +115,75 @@ function App() {
           }
         />
 
-         <Route
+        <Route
           path="/pg_owner/bookings"
           element={
             <ProtectedRoute allowedRoles={["ROLE_OWNER"]}>
               <OwnerBookings />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* <Route path="/admin" element={<AdminDashboard />} /> */}
+
+        {/* <Route path="/admin/users" element={<UsersPage />} /> */}
+
+        <Route
+          path="/admin/users/:id/bookings"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <UserBookingDetails />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/pgs/:id"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <PGDetailsPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* <Route
+          path="/admin/users/:id/bookings"
+          element={<UserBookingDetails />}
+        />
+        <Route path="/admin/pgs/:id" element={<PGDetailsPage />} /> */}
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/users"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <UsersPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/owners"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <OwnersPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/pgs"
+          element={
+            <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+              <PGsPage />
             </ProtectedRoute>
           }
         />

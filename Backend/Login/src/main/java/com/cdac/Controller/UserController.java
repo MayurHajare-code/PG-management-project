@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.Optional;
 
 import com.cdac.dto.ChangePasswordRequest;
+import com.cdac.dto.PGDetailsResponse;
 import com.cdac.model.Booking;
 import com.cdac.model.PG;
 import com.cdac.model.User;
 import com.cdac.repository.BookingRepository;
+import com.cdac.repository.PgRepository;
 import com.cdac.repository.UserRepository;
 import com.cdac.service.BookingService;
 import com.cdac.service.PgService;
@@ -43,6 +45,9 @@ public class UserController {
     
     @Autowired
     private UserRepository userRepo;
+    
+    @Autowired
+    private PgRepository pgRepository;
 
 	@GetMapping("/pgs")
 	public List<PG> getAllPGs() {
@@ -50,11 +55,30 @@ public class UserController {
 	}
 
 	@GetMapping("/pgs/{id}")
-	public ResponseEntity<PG> getPGById(@PathVariable Long id) {
-	    Optional<PG> pg = pgService.getPGByIdForUser(id);
-	    return pg.map(ResponseEntity::ok)
-	             .orElseGet(() -> ResponseEntity.notFound().build());
-	}
+	public ResponseEntity<PGDetailsResponse> getPGById(@PathVariable Long id) {
+//	    Optional<PG> pg = pgService.getPGByIdForUser(id);
+//	    return pg.map(ResponseEntity::ok)
+//	             .orElseGet(() -> ResponseEntity.notFound().build());
+//	}
+//	
+//	@GetMapping("/pgs/{id}")
+//    public ResponseEntity<PGDetailsResponse> getPGDetails(@PathVariable Long id) {
+        PG pg = pgRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("PG not found"));
+
+        PGDetailsResponse dto = new PGDetailsResponse();
+        dto.setPgId(pg.getId());
+        dto.setName(pg.getName());
+        dto.setLocation(pg.getLocation());
+        dto.setRent(pg.getRent());
+
+        dto.setOwnerId(pg.getOwner().getId());
+        dto.setOwnerName(pg.getOwner().getName());
+        dto.setOwnerEmail(pg.getOwner().getEmail());
+        dto.setOwnerPhone(pg.getOwner().getPhone());
+
+        return ResponseEntity.ok(dto);
+    }
 	
 	@PostMapping("user/change-password")
     public ResponseEntity<?> changePassword(@RequestBody ChangePasswordRequest request, Authentication authentication) {

@@ -43,8 +43,8 @@ a:hover {
 
 
 .sub-header {
-    background-image: url('../img/bg-img2.jpg');
-    height: 70vh;
+    background-image: url('../img/bg-img3.jpg');
+    height: 60vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -59,14 +59,21 @@ a:hover {
     height: auto;
     text-align: center;
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 30%;
 
 }
 
 .sub-header-content h1 {
-    font-size: 4rem;
-    color: rgb(255, 255, 255);
+    font-size: 50px;
+    color: #ffffc5;
+    text-align: center;
+}
+
+.sub-header-content p {
+    font-size: 20px;
+    color: #ffffc5;
+    text-align: justify;
 }
 
 .sub-header-box {
@@ -111,7 +118,17 @@ footer p {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  color: rgb(28, 27, 27);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: blueviolet;
+}
+
+.dropbtn:hover {
+  text-decoration: none;
+  font-weight: normal;
+  color: white;
+  box-shadow: 1px 1px 5px gray;
 }
 
 .dropdown-content {

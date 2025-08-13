@@ -65,38 +65,3 @@ const BookingsPage = () => {
 
 export default BookingsPage;
 
-
-
-
-
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import Footer from "../components/Footer";
-// import Header from "../components/Header";
-
-// const BookingsPage = () => {
-//   const [bookings, setBookings] = useState([]);
-
-//   useEffect(() => {
-//     axios.get("http://localhost:8080/users/bookings", { withCredentials: true })
-//       .then(res => setBookings(res.data))
-//       .catch(err => console.error(err));
-//   }, []);
-
-//   return (
-//     <div>
-//       <Header/>
-//       <h2>My Bookings</h2>
-//       {bookings.map(b => (
-//         <div key={b.id}>
-//           <p><strong>PG:</strong> {b.pg.name}</p>
-//           <p><strong>Location:</strong> {b.pg.location}</p>
-//           <p><strong>Booked On:</strong> {new Date(b.bookingDate).toLocaleString()}</p>
-//         </div>
-//       ))}
-//       <Footer/>
-//     </div>
-//   );
-// };
-
-// export default BookingsPage;

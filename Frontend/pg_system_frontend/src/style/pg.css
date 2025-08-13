@@ -24,7 +24,7 @@
 /* pg page main content */
 
 main {
-    width: 80%;
+    width: 100%;
     margin: 70px auto;
     /* background-color: aqua; */
 }
@@ -44,12 +44,12 @@ main {
     margin: 20px 0px;
 }
 
-form {
+/* form {
     width: 100%;
     margin: 0px auto;
-}
+} */
 
-input {
+/* input {
     display: inline;
     line-height: 25px;
     width: 350px;
@@ -65,7 +65,7 @@ input[placeholder] {
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
-    /* background-color: white; */
+    /* background-color: white; *
 }
 
 .btn {
@@ -76,7 +76,7 @@ input[placeholder] {
     font-weight: bold;
     text-transform: capitalize;
     text-decoration: none;
-    /* border-radius: 8px; */
+    /* border-radius: 8px; *
     width: auto;
     margin: 0px auto;
     box-shadow: 1px 1px 10px black;
@@ -93,8 +93,8 @@ input[placeholder] {
     border-radius: 8px;
     width: auto;
     margin: 0px auto;
-    /* box-shadow: 1px 1px 10px black; */
-}
+    /* box-shadow: 1px 1px 10px black; *
+} */
 
 
 

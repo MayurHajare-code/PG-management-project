@@ -27,9 +27,17 @@
   border-radius: 4px;
 }
 
-.pg-back-link {
-  display: block;
-  margin-top: 1.5rem;
-  text-decoration: underline;
+
+.add-pg-back-link {
+  text-align: center;
+  margin-top: 1rem;
   color: #007bff;
+  text-decoration: underline;
+}
+
+.add-pg-back-link:hover{
+  text-align: center;
+  margin-top: 1rem;
+  color: #181919;
+  text-decoration: underline;
 }

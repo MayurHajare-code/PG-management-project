@@ -11,5 +11,9 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
 	List<Booking> findByUser(User user);
 
 	List<Booking> findByPgOwnerEmail(String ownerEmail);
+	
+	List<Booking> findByUserId(Long userId);
+	
+	Long countByPgOwnerEmail(String email);
 }
 

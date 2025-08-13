@@ -43,7 +43,7 @@ const Header = () => {
         <ul className="ul">
           <li>
             <Link className="link" to="/">
-              Home
+              All Pgs
             </Link>
           </li>
           <li>
@@ -51,7 +51,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="link" to="/pgs">
               PG
             </Link>
@@ -61,12 +61,12 @@ const Header = () => {
             <Link className="link" to="/contact">
               Contact
             </Link>
-          </li>
+          </li> */}
 
           {!user ? (
             <>
               <li>
-                <Link className="link" to="pg_owner/pg_owner_register">
+                <Link className="link" to="/pg_owner/pg_owner_register">
                   Owner
                 </Link>
               </li>
@@ -78,9 +78,9 @@ const Header = () => {
             </>
           ) : (
             <li className="dropdown">
-              <button onClick={toggleDropdown} className="dropbtn ">
+              <Link onClick={toggleDropdown} className="dropbtn ">
                 {user.name || "Account"} ▼
-              </button>
+              </Link>
               {dropdownOpen && (
                 <div className="dropdown-content">
                   <Link className="link" to="/profile">
@@ -104,7 +104,10 @@ const Header = () => {
 
       <div className="sub-header"></div>
       <div className="sub-header-content">
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>PG Accommodation System</h1>
+        <p>
+          Welcome to our PG Accommodation System! We are committed to making the process of finding, booking, and managing Paying Guest accommodations simple, transparent, and efficient for both tenants and property owners.
+        </p>
       </div>
     </header>
   );

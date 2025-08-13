@@ -1,8 +1,8 @@
 /* home page main content */
 
 main {
-    width: 80%;
-    margin: 200px auto 100px;
+    width: 100%;
+    margin: 50px 0px;
     /* background-color: aqua; */
 }
 
@@ -26,7 +26,8 @@ main {
     height: auto;
     margin: 20px;
     cursor: pointer;
-    
+    box-shadow: 5px 5px 20px rgb(53, 52, 52);
+    text-decoration: none !important;
 }
 
 .card:hover{
@@ -44,17 +45,18 @@ main {
     padding: 0px 20px 20px;
 }
 .card h3 {
-    font-size: 2rem;
+    font-size: 20px;
     text-align: justify;
     text-transform: capitalize;
     color: rgb(49, 49, 49);
     margin: 10px 0px;
+    text-decoration: none;
 }
 
 .card p,
 .card-categary,
 .card-price {
-    font-size: 1.5rem;
+    font-size: 15px;
     text-align: justify;
     text-transform: capitalize;
     margin: 8px 0px;
@@ -68,5 +70,9 @@ main {
 .card-price {
     color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 17px;
+}
+
+.a {
+    text-decoration: none;
 }

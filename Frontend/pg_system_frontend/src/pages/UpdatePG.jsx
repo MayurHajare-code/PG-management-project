@@ -65,7 +65,7 @@ const UpdatePG = () => {
 
   return (
     <OwnerLayout ownerName={ownerName}>
-      <div className="update-pg-container">
+      <div className="container">
         <h2>Update PG</h2>
 
         {pg.name ? (
@@ -95,7 +95,7 @@ const UpdatePG = () => {
               required
             />
 
-            <button type="submit">Update</button>
+            <button type="submit" className="btn">Update</button>
             <Link to="/pg_owner/manage-pg" className="add-pg-back-link">
               Back
             </Link>

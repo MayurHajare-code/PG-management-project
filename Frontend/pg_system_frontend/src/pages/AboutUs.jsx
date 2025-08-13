@@ -6,19 +6,28 @@ const AboutUs = () => {
   return (
     <div>
       <Header />
-      <div style={styles.container}>
+        <div style={styles.container}>
         <h1 style={styles.heading}>About Us</h1>
         <p style={styles.text}>
-          Welcome to our website! We are dedicated to providing the best service
-          for your needs. Our mission is to deliver high-quality solutions and
-          ensure customer satisfaction.
+          Welcome to our PG Accommodation System! We are committed to making the
+          process of finding, booking, and managing Paying Guest accommodations
+          simple, transparent, and efficient for both tenants and property owners.
         </p>
         <p style={styles.text}>
-          Our team consists of passionate developers, designers, and support
-          staff working together to create amazing experiences for our users.
+          Our platform connects users with verified PG properties across multiple
+          cities. Tenants can search for accommodations based on location, rent,
+          and facilities, while PG owners can easily list their properties,
+          manage bookings, and track tenant history — all in one place.
         </p>
         <p style={styles.text}>
-          Thank you for visiting us. We hope to serve you soon!
+          We believe in providing a secure and user-friendly experience by using
+          the latest technology. Our team of developers, designers, and support
+          staff work tirelessly to ensure a seamless experience for every user.
+        </p>
+        <p style={styles.text}>
+          Thank you for trusting us with your accommodation needs. Whether you’re
+          looking for a comfortable place to stay or want to manage your PG
+          efficiently, we are here to help you every step of the way.
         </p>
       </div>
       <Footer />

@@ -7,4 +7,6 @@ import com.cdac.model.User;
 
 public interface PgRepository extends JpaRepository<PG, Long> {
     List<PG> findByOwner(User owner);
+    
+    Long countByOwnerEmail(String email);
 }

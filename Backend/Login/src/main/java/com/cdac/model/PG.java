@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -76,5 +77,21 @@ public class PG {
 	public void setOwner(User owner) {
 		this.owner = owner;
 	}
+	
+	
+	
+//	@Lob
+//	private byte[] imageData;
+//
+//	public byte[] getImageData() {
+//	    return imageData;
+//	}
+//
+//	public void setImageData(byte[] imageData) {
+//	    this.imageData = imageData;
+//	}
+
+	
+	
 
 }

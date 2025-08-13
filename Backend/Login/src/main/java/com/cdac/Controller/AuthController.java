@@ -68,6 +68,8 @@ public class AuthController {
 		response.put("name", user.getName());
 		response.put("phone", user.getPhone());
 		response.put("date", user.getRegisterDate().toString());
+//		response.put("role", "ROLE_" + user.getRole());
+		System.out.println("role  "+ user.getRole());
 		return response;
 	}
 

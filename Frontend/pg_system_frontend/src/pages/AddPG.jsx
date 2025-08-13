@@ -1,13 +1,9 @@
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import OwnerLayout from "../components/OwnerLayout";
-import "../style/AddPG.css";
+// import "../style/AddPG.css";
+import "../style/UpdatePG.css";
 
 const AddPG = () => {
   const [ownerName, setOwnerName] = useState("");
@@ -68,16 +64,23 @@ const AddPG = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
+
+
   return (
     <OwnerLayout ownerName={ownerName}>
-      <div className="add-pg-container">
-        <h2 className="add-pg-title">Add PG Details</h2>
+      <div className="container">
+        <h2>Add PG Details</h2>
 
         {message && <p className="success-msg">{message}</p>}
         {error && <p className="error-msg">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="add-pg-form">
-          <div>
+        <form onSubmit={handleSubmit}>
+      
             <label>PG Name:</label>
             <input
               type="text"
@@ -86,9 +89,7 @@ const AddPG = () => {
               onChange={handleChange}
               required
             />
-          </div>
-
-          <div>
+        
             <label>Location:</label>
             <input
               type="text"
@@ -97,9 +98,7 @@ const AddPG = () => {
               onChange={handleChange}
               required
             />
-          </div>
-
-          <div>
+         
             <label>Rent:</label>
             <input
               type="number"
@@ -108,7 +107,12 @@ const AddPG = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          
+
+          {/* <div>
+            <label>PG Image:</label>
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+          </div> */}
 
           <button type="submit" className="add-pg-submit-btn">
             Add PG

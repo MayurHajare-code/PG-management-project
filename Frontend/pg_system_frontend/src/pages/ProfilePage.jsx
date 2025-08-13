@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../style/ProfilePage.css";
+// import "../style/ProfilePage.css";
+import "../style/UpdatePG.css";
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -52,38 +53,42 @@ const ProfilePage = () => {
   return user ? (
     <div>
       <Header />
-      
-      <form>
+      <div className="container">
         <h2>Profile</h2>
-        <label>Email:</label>
-        <input type="text" name="email" value={form.email} readOnly />
-        <br />
+        <form>
+          <label>Email:</label>
+          <input type="text" name="email" value={form.email} readOnly />
+          
 
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-        />
-        <br />
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+          />
+    
 
-        <label>Phone:</label>
-        <input
-          type="text"
-          name="phone"
-          value={form.phone}
-          onChange={handleChange}
-        />
-        <br />
+          <label>Phone:</label>
+          <input
+            type="text"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+          />
+   
 
-        <label>Registered Date:</label>
-        <input type="text" name="date" value={form.date} readOnly />
-        <br />
-        <br />
+          <label>Registered Date:</label>
+          <input type="text" name="date" value={form.date} readOnly />
+       
+       
 
-        <button className="btn" onClick={handleUpdate}>Update Profile</button>
-      </form>
+          <button className="btn" onClick={handleUpdate}>
+            Update Profile
+          </button>
+        </form>
+      </div>
+
       <Footer />
     </div>
   ) : (

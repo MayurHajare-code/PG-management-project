@@ -1,4 +1,4 @@
-/** pg page details ***/
+/** pg page details *
 .sub-header-about {
     background-image: url('../img/bg-img2.jpg');
     height: 50vh;
@@ -21,12 +21,12 @@
     color: rgb(255, 255, 255);
 }
 
-/* pg page main content */
+/* pg page main content *
 
 main {
     width: 80%;
     margin: 50px auto;
-    /* background-color: aqua; */
+    /* background-color: aqua; *
 }
 
 .about-head {
@@ -79,3 +79,4 @@ main {
     height: auto;
 }
 
+*/

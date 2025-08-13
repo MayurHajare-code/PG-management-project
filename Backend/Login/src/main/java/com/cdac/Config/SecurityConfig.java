@@ -46,7 +46,7 @@ public class SecurityConfig {
                 .requestMatchers("/owner/**").hasRole("OWNER")
                 .requestMatchers("/users/book/**").hasRole("USER")
                 .requestMatchers("/users/change-password").authenticated()
-
+                .requestMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults())
